@@ -1,0 +1,48 @@
+<!-- <header class="hero-unit" id="banner">
+  <div class="container">
+    <h1>'Allo, 'Allo!</h1>
+    <p class="lead">Kick-start your next web app with Angular Fullstack</p>
+    <img src="assets/images/yeoman.png" alt="I'm Yeoman">
+  </div>
+</header>
+ -->
+
+<div class="container" layout-fill layout="column" flex >
+  <div  layout="row" flex>
+   <div layout="column" flex id="content" role="main">
+      <md-card layout="vertical" flex id="content">
+        <md-card-content style="margin-top:200px" layout="row" layout-align="center center" >
+           
+            <form name="postForm" novalidate="">
+            <md-content md-theme="docs-dark">
+              <md-input-container>
+                <label>Email</label>
+                <input class="mdl-textfield__input" name="email" ng-model="main.formData.email"ng-pattern="/^[a-zA-Z][-.\w]+\@[-\w]+(?:\.[a-z]+)?\.[a-z]{2,}/" required>
+                
+              </md-input-container>
+              <md-input-container>
+                <label ng-class="">Password</label>
+                <input class="mdl-textfield__input" name="password" ng-model="main.formData.password" required type="password" ng-minlength="6" ng-maxlength="20">
+              </md-input-container>
+              <md-input-container layout-align="center center">
+                <div layout="row" layout-sm="column" layout-margin>
+                  <md-button ng-click="main.login(postForm.$valid, 'login')" class="md-raised" flex="50" flex-sm="100">Login</md-button>
+                  <md-button class="md-raised md-primary" ng-click="main.login(postForm.$valid, 'register')" flex="50" flex-sm="100">Register</md-button>
+                </div>
+              </md-input-container>
+            </md-content>
+            <span class="text-danger md-title" ng-messages="postForm.password.$error" ng-if="postForm.password.$touched">
+                <p ng-message="minlength">Enter more than 6 characters</p>
+                <p ng-message="maxlength">Enter less than 20 character</p>
+              </span>
+            <span class="text-danger md-title" ng-messages="postForm.email.$error" ng-if="postForm.email.$touched">
+                  <p ng-message="pattern">Invalid email address</p>
+                  <p ng-message="pattern">Enter email address</p>
+                </span>
+            </form>
+
+        </md-card-content>
+      </md-card>
+    </div>
+  </div>
+</div>
