@@ -18,6 +18,7 @@ import config from './environment';
 import session from 'express-session';
 import connectMongo from 'connect-mongo';
 import mongoose from 'mongoose';
+import cors from 'cors';
 var MongoStore = connectMongo(session);
 
 export default function(app) {
