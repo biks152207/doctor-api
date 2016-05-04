@@ -82,6 +82,7 @@ export function create(req, res) {
   LoginService.query({email: req.body.email})
     .then(result =>{
       if (!result){
+        res.status(400);
         return res.json({
           success: 0,
           message: 'User doesn\'t exist'
@@ -93,9 +94,9 @@ export function create(req, res) {
           res.json({success: 0, message: 'Something went wrong' });
         }
         if (isMatch){
-          var token = jwt.sign(result, config.secret, {
-              expiresIn: '5h'
-          });
+          // var token = jwt.sign(result, config.secret, {
+          //     expiresIn: '5h'
+          // });
           token.jwtSignature(result)
             .then(data =>{
               return res.json({
