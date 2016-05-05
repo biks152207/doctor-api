@@ -107,6 +107,7 @@ export function create(req, res) {
               })
           })
       }else{
+        res.status(400);
         return res.json({
           success: 0,
           message: 'User already registered'

@@ -81,21 +81,14 @@ export function create(req, res) {
   if (req.body.email){
     Query.query(Login,{email:req.body.email})
       .then(result =>{
-        // console.log(result);
-        // console.log('getting result');
-        // if (err){
-        //   return res.json({
-        //     status: 0,
-        //     message: 'Something wrong'
-        //   })
-        // }
+
         if (result){
           return res.json({
-            status: 1
+            status: 0
           })
         }else{
             return res.json({
-              status: 0
+              status: 1
             })
         }
       }, err =>{
