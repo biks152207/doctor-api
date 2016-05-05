@@ -1,0 +1,31 @@
+{
+    "REGISTER": {
+        "TITLE": "Create an account",
+        "NAME": "Full Name",
+        "EMAIL": "Email",
+        "FIRST_NAME" : "First Name",
+        "LAST_NAME" : "Last Name",
+        "USERNAME" : "Username",
+        "PASSWORD": "Password",
+        "PASSWORD_CONFIRM": "Password (Confirm)",
+        "READ_ACCEPT": "I read and accept",
+        "TERMS_COND": "terms and conditions",
+        "CREATE_ACCOUNT": "CREATE MY ACCOUNT",
+        "ALREADY_HAVE": "Already have an account?",
+        "LOGIN": "Log in",
+        "PHONE": "Phone",
+        "DOB": "Date Of Birth",
+        "ERRORS": {
+            "USERNAME_REQUIRED": "Username field is required",
+            "FIRSTNAME_REQUIRED": "First name field is required",
+            "LASTNAME_REQUIRED": "Last name field is required",
+            "PHONE_REQUIRED": "Phone field is required",
+            "DOB_REQUIRED": "Date of birth field is required",
+            "EMAIL_REQUIRED": "Email field is required",
+            "EMAIL_MUST_VALID": "Email must be a valid e-mail address",
+            "PASSWORD_REQUIRED": "Password field is required",
+            "PASSWORD_CONFIRM_REQUIRED": "Password confirm field is required",
+            "TERMS_REQUIRED": "You must accept terms and conditions before submitting the form"
+        }
+    }
+}
