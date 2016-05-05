@@ -2,6 +2,7 @@
 import Q from 'q';
 import Login from '../login/login.model';
 export function post(ModelObject){
+  console.log(ModelObject);
   var Db = new Login(ModelObject);
   return Q.nfcall(Db.save.bind(Db)); 
 }

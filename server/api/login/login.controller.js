@@ -79,6 +79,7 @@ export function show(req, res) {
 
 // Creates a new Login in the DB
 export function create(req, res) {
+  if (req.body.email && req.body.password){
   LoginService.query({email: req.body.email})
     .then(result =>{
       if (!result){
@@ -117,6 +118,13 @@ export function create(req, res) {
       console.log(result);
       console.log('getting result');
     })
+  }else{
+    res.status(400);
+    return res.json({
+            success: 0,
+            message: 'Enter your email and password'
+          })
+  }
 }
 
 // Updates an existing Login in the DB
