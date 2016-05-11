@@ -114,9 +114,7 @@ export function create(req, res) {
           })
         }
       })
-      var hash
-      console.log(result);
-      console.log('getting result');
+
     })
   }else{
     res.status(400);

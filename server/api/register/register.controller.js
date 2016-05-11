@@ -93,6 +93,8 @@ export function show(req, res) {
 export function create(req, res) {
   RegisterService.query({email: req.body.email})
     .then(queryObject => {
+      console.log(queryObject);
+      console.log('getting query object');
       if (!queryObject){
         RegisterService.post(req.body)
           .then(result =>{
@@ -104,7 +106,11 @@ export function create(req, res) {
                   token: token,
                   data:result[0]
                 })
+              }, err => {
+                console.log(err);
               })
+          }, err => {
+            console.log(er);
           })
       }else{
         res.status(400);

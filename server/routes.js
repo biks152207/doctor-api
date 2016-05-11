@@ -10,6 +10,7 @@ var controller = require('../server/api/register/register.controller');
 
 export default function(app) {
   // Insert routes below
+  app.use('/api/post', require('./api/post'));
   app.use('/api/unique/email', require('./api/unique/email'));
   app.use('/api/register', require('./api/register'));
   app.use('/api/login', require('./api/login'));

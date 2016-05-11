@@ -5,9 +5,10 @@ import bcrypt from 'bcrypt';
 const SALT_WORK_FACTOR = 10;
 
 var LoginSchema = new mongoose.Schema({
-  email: String,
-  password: String,
-  active: Boolean
+  email: {type: String, required: true},
+  password: { type: String, required: true},
+  active: Boolean,
+  name: { type: String, required: true},
 });
 LoginSchema.pre('save', function(next){
   var user = this;
